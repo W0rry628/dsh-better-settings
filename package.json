@@ -1,0 +1,69 @@
+{
+  "name": "dsh-better-settings",
+  "version": "0.1.0",
+  "description": "DSH 插件：在侧边栏底部账号栏右侧加一个设置快捷按钮，一键直达设置页，不必先点开账号菜单。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek",
+    "cordis",
+    "plugin",
+    "settings",
+    "sidebar"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/client-smoke.mjs"
+  },
+  "license": "MIT",
+  "author": "W0rry628",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/W0rry628/dsh-better-settings.git"
+  },
+  "homepage": "https://github.com/W0rry628/dsh-better-settings#readme",
+  "bugs": {
+    "url": "https://github.com/W0rry628/dsh-better-settings/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-primitives"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.4"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  }
+}

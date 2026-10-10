@@ -1,0 +1,17 @@
+# 依赖与构建产物
+node_modules/
+*.tgz
+pnpm-lock.yaml
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 日志与临时文件
+*.log
+npm-debug.log*
+pnpm-debug.log*
+*.tmp

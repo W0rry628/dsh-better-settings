@@ -1,0 +1,14 @@
+# dsh-better-settings bundle patch
+#
+# Declared by `dsh.bundle.patch` in package.json: installing the package through
+# the official CLI —
+#
+#   dsh plugin --profile desktop add dsh-better-settings
+#
+# — appends `dsh-better-settings` to the profile's bundle stack, and this patch
+# mounts the plugin's row. The row itself has no Host behaviour: the whole
+# feature is the browser half declared by `dsh.client` (lib/client.js) which
+# adds the Settings shortcut beside the sidebar account bar.
+- insert:
+    - id: better-settings
+      name: 'dsh-better-settings'
